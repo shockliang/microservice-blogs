@@ -10,7 +10,7 @@ app.post('/events', ((req, res) => {
 
   axios.post('http://localhost:4000/events', event);  // post service
   axios.post('http://localhost:5000/events', event);  // comment service
-  axios.post('http://localhost:6000/events', event);  // query service
+  axios.post('http://localhost:5555/events', event);  // query service
 
   res.send({status: 'OK'});
 }));
