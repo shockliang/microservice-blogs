@@ -5,7 +5,7 @@ const axios = require('axios');
 const app = express();
 app.use(bodyParser.json());
 
-app.post('/events', ((req, res) => {
+app.post('/events', (req, res) => {
   const event = req.body;
 
   axios.post('http://localhost:4000/events', event);  // post service
@@ -14,7 +14,7 @@ app.post('/events', ((req, res) => {
   axios.post('http://localhost:5888/events', event);  // moderation service
 
   res.send({status: 'OK'});
-}));
+});
 
 app.listen(7000, () => {
   console.log('Listen on port 7000');
