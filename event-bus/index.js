@@ -5,8 +5,11 @@ const axios = require('axios');
 const app = express();
 app.use(bodyParser.json());
 
+const events = [];
+
 app.post('/events', (req, res) => {
   const event = req.body;
+  events.push(event);
 
   axios.post('http://localhost:4000/events', event);  // post service
   axios.post('http://localhost:5000/events', event);  // comment service
@@ -14,6 +17,10 @@ app.post('/events', (req, res) => {
   axios.post('http://localhost:5888/events', event);  // moderation service
 
   res.send({status: 'OK'});
+});
+
+app.get('/events', (req, res) => {
+  res.send(events);
 });
 
 app.listen(7000, () => {
