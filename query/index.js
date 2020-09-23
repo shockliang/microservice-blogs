@@ -49,7 +49,7 @@ app.post('/events', (req, res) => {
 
 app.listen(5555, async () => {
   console.log('Listen on port 5555');
-  const res = await axios.get('http://localhost:7000/events');
+  const res = await axios.get('http://event-bus-service:7000/events');
 
   for (let event of res.data) {
     console.log('Processing event:', event.type);
