@@ -11,7 +11,7 @@ app.post('/events', (req, res) => {
   const event = req.body;
   events.push(event);
 
-  axios.post('http://localhost:4000/events', event);  // post service
+  axios.post('http://posts-clusterip-service:4000/events', event);  // post service
   axios.post('http://localhost:5000/events', event);  // comment service
   axios.post('http://localhost:5555/events', event);  // query service
   axios.post('http://localhost:5888/events', event);  // moderation service
