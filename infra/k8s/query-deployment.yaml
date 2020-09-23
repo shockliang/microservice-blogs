@@ -1,32 +1,31 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: event-bus-deployment
+  name: query-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: event-bus
+      app: query
   template:
     metadata:
       labels:
-        app: event-bus
+        app: query
     spec:
       containers:
-        - name: event-bus
-          image: shockwater/blog-event-bus:0.0.3
-
+        - name: query
+          image: shockwater/blog-query:0.0.2
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: event-bus-service
+  name: query-service
 spec:
   type: ClusterIP
   selector:
-    app: event-bus
+    app: query
   ports:
-    - name: event-bus
+    - name: query
       protocol: TCP
-      port: 7000
-      targetPort: 7000
+      port: 5555
+      targetPort: 5555
