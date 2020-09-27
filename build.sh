@@ -13,7 +13,7 @@ docker build -f ./event-bus/Dockerfile -t shockwater/blog-event-bus:0.0.3 ./even
 docker build -f ./moderation/Dockerfile -t shockwater/blog-moderation:0.0.2 ./moderation
 
 # build posts service
-docker build -f ./posts/Dockerfile -t shockwater/blog-posts:0.0.2 ./posts
+docker build -f ./posts/Dockerfile -t shockwater/blog-posts:0.0.3 ./posts
 
 # build query service
-docker build -f ./query/Dockerfile -t shockwater/blog-query:0.0.2 ./query
+docker build -f ./query/Dockerfile -t shockwater/blog-query:0.0.3 ./query

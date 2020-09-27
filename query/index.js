@@ -42,7 +42,7 @@ app.get('/posts', (req, res) => {
 app.post('/events', (req, res) => {
   const {type, data} = req.body;
 
-  handleEvent(typtype, datae, data);
+  handleEvent(type, data);
 
   res.send({});
 });
