@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # build client
-docker build -f ./client/Dockerfile -t shockwater/blog-client:0.0.1 ./client
+docker build -f ./client/Dockerfile -t shockwater/blog-client:0.0.2 ./client
 
 # build comments service
 docker build -f ./comments/Dockerfile -t shockwater/blog-comments:0.0.2 ./comments
