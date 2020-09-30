@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: comments
-          image: shockwater/blog-comments:0.0.2
+          image: shockwater/blog-comments
 ---
 apiVersion: v1
 kind: Service

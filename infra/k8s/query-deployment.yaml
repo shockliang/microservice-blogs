@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: query
-          image: shockwater/blog-query:0.0.3
+          image: shockwater/blog-query
 ---
 apiVersion: v1
 kind: Service

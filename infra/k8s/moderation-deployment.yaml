@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: moderation
-          image: shockwater/blog-moderation:0.0.2
+          image: shockwater/blog-moderation
 ---
 apiVersion: v1
 kind: Service
